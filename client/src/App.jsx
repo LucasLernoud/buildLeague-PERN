@@ -1,26 +1,13 @@
-// import { useEffect } from "react"
-import { ListWatches } from "./components/listWatches"
+import { Routes, Route } from "react-router-dom"
+import { Homepage } from "./pages/Homepage"
+import { Login } from "./pages/Login"
 
-const App = () => {
-  // const userEmail = "zizou10@gmail.com"
-  // const getUser = async () => {
-  //   try {
-  //     const response = await fetch(`http://localhost:8000/user/${userEmail}`)
-  //     const json = await response.json()
-  //     console.log(json)
-  //   } catch (error) {
-  //     console.error(error)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getUser()
-  // }, [])
-
+function App() {
   return (
-    <div>
-      <ListWatches />
-    </div>
+    <Routes>
+      <Route path="/" exact element={<Homepage />} />
+      <Route path="/Login" element={<Login />} />
+    </Routes>
   )
 }
 

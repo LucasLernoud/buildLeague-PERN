@@ -20,7 +20,7 @@ CREATE TABLE montres (
     description TEXT,
     prix DECIMAL(10, 2),
     stock INTEGER,
-    categorie_id INTEGER REFERENCES categories(id),
+    categories INTEGER REFERENCES categories(id),
     marque_id INTEGER REFERENCES marques(id),
     image_url VARCHAR(255)
 );
@@ -150,3 +150,111 @@ INSERT INTO marques (nom) VALUES
     ('Santos', 'Super montre', 7500.00, 10, 1, 3),
     ('Submariner', 'Cool montre', 40000.00, 15, 1, 1),
     ('Tourbillon raphael nadal', 'montre chère', 500000.00, 5, 3, 3);
+
+
+
+    /********   MONTRES STRUCTURE DE DONNEES 
+    
+    {
+  "id": 1,
+  "nom": "Santos",
+  "description": "Montre Santos par Cartier - Élégance intemporelle et raffinement.",
+  "prix": 7500.0,
+  "stock": 10,
+  "marque": "Cartier",
+  "image_url": "https://www.cartier.com/variants/images/44733502651435035/img1/w1242_tpadding12.jpg",
+  "created": "2024-01-23T12:00:00Z",
+  "categories": [
+    "Luxe",
+    "Automatique",
+    "Acier inoxydable",
+    "Cuir",
+    "Date",
+    "Blanc",
+    "Haut de gamme",
+    "Moyen",
+    "Unisexe"
+  ]
+}
+
+
+
+
+Type de mouvement :
+
+Mécanique
+Quartz
+Automatique
+Style :
+
+Classique
+Sport
+Décontracté
+Vintage
+Luxe
+Matériau du boîtier :
+
+Acier inoxydable
+Titane
+Or
+Plastique
+Céramique
+Type de bracelet :
+
+Cuir
+Acier inoxydable
+Nylon
+Caoutchouc
+Bracelet en tissu
+Fonctionnalités :
+
+Chronographe
+Date
+Jour de la semaine
+Résistance à l'eau
+Fonction GMT
+Marque :
+
+Rolex
+Seiko
+Casio
+Omega
+Tag Heuer
+Couleur du cadran :
+
+Noir
+Blanc
+Bleu
+Argent
+Cadran coloré
+Niveau de prix :
+
+Entrée de gamme
+Milieu de gamme
+Haut de gamme
+Montres de luxe
+Taille du boîtier :
+
+Petit
+Moyen
+Grand
+Surdimensionné
+Genre :
+
+Montres pour hommes
+Montres pour femmes
+Unisexe
+Collection spécifique :
+
+Collection vintage
+Collection de plongée
+Collection de pilote
+Collection limitée
+Affichage du temps :
+
+Analogique
+Numérique
+Hybride
+    
+    
+***********/
