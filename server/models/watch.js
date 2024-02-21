@@ -24,7 +24,14 @@ return sequelize.define('Watch', {
     },
     categories: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      get(){
+        return this.getDataValue('categories').split(',')
+      },
+      set(categories){
+        this.setDataValue('categories', categories.join())
+      }
+
     },
     marque: {
       type: DataTypes.STRING,

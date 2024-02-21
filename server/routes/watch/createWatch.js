@@ -7,6 +7,9 @@ module.exports = (app) => {
         const message = `La montre ${req.body.nom} a bien été crée.`
         res.json({ message, data: watch })
       })
-      .catch(error => console.error(error))
+      .catch(error => {
+        const message = 'La montre n\'a pas pu être ajoutée. Rééssayez dans quelques instants'
+        res.status(500).json({message, data: error})
+    }) 
   })
 }

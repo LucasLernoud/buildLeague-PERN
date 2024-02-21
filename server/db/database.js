@@ -38,7 +38,7 @@ const initDb = () => {
         prix: watch.prix,
         stock: watch.stock,
         image_url: watch.image_url,
-        categories:watch.categories.join(),
+        categories:watch.categories,
         marque:watch.marque
       }).then(watch => console.log(watch.toJSON()))
     })
