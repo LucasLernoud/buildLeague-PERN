@@ -6,7 +6,7 @@ const watches = require('./mock-watches')
  
 
 
-const sequelize = new Sequelize("dbwatches", "lucas", "5962", {
+const sequelize = new Sequelize("buildleaguedb", "lucas", "5962", {
   host: "localhost",
   dialect: "postgres",
   dialectOptions: {
@@ -29,7 +29,7 @@ const Watch = WatchModel(sequelize, DataTypes)
 // Synchronisation des Modèles sequelize avec les tables de la BDD 
 const initDb = () => {
   return sequelize.sync({force:true})
-  .then(_ => {
+  .then(() => {
     
     watches.map(watch => {
       Watch.create({
@@ -48,9 +48,5 @@ const initDb = () => {
 
   
 }
-
-
-
-
 
 module.exports = {sequelize, initDb, Watch, User}
