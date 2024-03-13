@@ -19,6 +19,7 @@ require('./routes/watch/createWatch')(app)
 require('./routes/watch/findWatchByPk')(app)
 require('./routes/watch/updateWatch')(app)
 require('./routes/watch/deleteWatch')(app)
+require('./routes/user/login')(app)
 
 //Erreur 404
 app.use(({res}) => {
